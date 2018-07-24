@@ -34,7 +34,12 @@
   border: grey solid 1px;
   margin: 0 5px;
   width: 86%;
-  margin-left: 7%
+  margin-left: 7%;
+  border-radius: 5px;
+  margin-top: 10px
+}
+.post_summary:hover{
+  box-shadow: rgba(71, 71, 71, 0.507) 0px 4px 4px 4px;
 }
 .post_summary h3{
   padding-left: 30px 
@@ -66,8 +71,10 @@
   justify-content: space-between;
   height: 100vh;
   padding: 20px;
-  width: 8vw
+  width: 8vw;
+  background-image: linear-gradient(#E9ff70, #ffd670 40%, #ff9770 73%, #ff70a6)
 }
+
 .App{
   display: flex;
   justify-content: center;
@@ -130,6 +137,8 @@
   margin-left: 10%;
   margin-top: 50px;
   align-items: center;
+  border-radius: 5px;
+  box-shadow: rgba(71, 71, 71, 0.507) 0px 4px 4px 4px;
   
 }
 .search-bar{
@@ -142,7 +151,9 @@
   background-color: white;
   width: 80%;
   margin-left: 10%;
-  padding: 40px 0
+  padding: 40px 0;
+  border-radius: 5px;
+  box-shadow: rgba(71, 71, 71, 0.507) 0px 4px 4px 4px;
 }
 .checkbox{
   margin-right: 30px 
@@ -157,9 +168,11 @@ Link:visited{
   flex-direction: column;
   width: 80%;
   background-color: white;
-  margin-left: 10%;
+  margin-left: 8%;
   margin-top: 30px;
-  padding: 10px
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(71, 71, 71, 0.507) 0px 4px 4px 4px;
 }
 .title-author{
   display: flex;
@@ -168,7 +181,10 @@ Link:visited{
 }
 .post-content{
   display: flex;
-  justify-content: space-between
+  justify-content: center
+}
+.post-content img{
+  margin-right: 30px
 }
 .content-container{
   width: 45%;
@@ -187,16 +203,23 @@ Link:visited{
   width: 80%;
   margin-left: 10%;
   margin-top: 40px;
+  border-radius: 5px;
+  box-shadow: rgba(71, 71, 71, 0.507) 0px 4px 4px 4px;
 }
 .form .title,
 h3{
   align-self: baseline;
-  margin-left: 40px
+  margin-left: 48px;
+  margin-bottom: 0
 }
 .form-input{
-  width: 90%
+  width: 90%;
+  height: 25px;
+  font-size: 18px;
 }
 #post-button{
-  margin: 20px;
-  align-self: flex-end
+  margin: 20px 45px;
+  align-self: flex-end;
+  padding-left: 20px;
+  padding-right: 20px
 }

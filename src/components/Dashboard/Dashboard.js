@@ -81,7 +81,7 @@ class Dashboard extends Component {
 				<button className='black-button' onClick={() => this.resetSearch()}>Reset</button>
 				</div>
 			<div>
-				My Posts <input className='checkbox' type="checkbox" onChange={() => this.hideUserPosts()} value={this.state.user_posts} />
+				Hide My Posts <input className='checkbox' type="checkbox" onChange={() => this.hideUserPosts()} value={this.state.user_posts} />
 				</div>
 				</div>
 				<div className='posts-box'>{posts}</div>
