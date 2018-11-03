@@ -58,7 +58,7 @@ class Form extends Component {
 						cols="30"
 						rows="10"
 					/>
-					<button id='post-button' className="black-button" onClick={() => this.newPost()}>
+					<button id="post-button" className="black-button" onClick={() => this.newPost()}>
 						post
 					</button>
 				</div>

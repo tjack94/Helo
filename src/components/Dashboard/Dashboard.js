@@ -68,23 +68,33 @@ class Dashboard extends Component {
 
 		return (
 			<div className="dashboard">
-			<div className='dashboard-search'>
-				<div>
-				<input
-					className="search-bar"
-					type="text"
-					placeholder="Search by Title"
-					value={this.state.search}
-					onChange={(e) => this.handleChange(e.target.value)}
-				/>
-				<button className='black-button' onClick={() => this.filterPosts()}>search</button>
-				<button className='black-button' onClick={() => this.resetSearch()}>Reset</button>
+				<div className="dashboard-search">
+					<div>
+						<input
+							className="search-bar"
+							type="text"
+							placeholder="Search by Title"
+							value={this.state.search}
+							onChange={(e) => this.handleChange(e.target.value)}
+						/>
+						<button className="black-button" onClick={() => this.filterPosts()}>
+							search
+						</button>
+						<button className="black-button" onClick={() => this.resetSearch()}>
+							Reset
+						</button>
+					</div>
+					<div>
+						Hide My Posts{' '}
+						<input
+							className="checkbox"
+							type="checkbox"
+							onChange={() => this.hideUserPosts()}
+							value={this.state.user_posts}
+						/>
+					</div>
 				</div>
-			<div>
-				Hide My Posts <input className='checkbox' type="checkbox" onChange={() => this.hideUserPosts()} value={this.state.user_posts} />
-				</div>
-				</div>
-				<div className='posts-box'>{posts}</div>
+				<div className="posts-box">{posts}</div>
 			</div>
 		);
 	}

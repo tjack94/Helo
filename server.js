@@ -8,6 +8,7 @@ require('dotenv').config()
 const controller = require('./server/controller')
 const app = express()
 app.use(helmet())
+app.use(express.static(__dirname + '/build'));
 
 app.use(session({
   secret: process.env.SECRET,
@@ -29,7 +30,9 @@ app.get('/api/post/:id', controller.getSinglePost)
 app.post('/api/newpost', controller.newPost)
 app.post('/api/auth/logout', (req, res, next)=> req.session.destroy)
 app.get('/api/auth/me', controller.userInfo)
-
+app.get('/*', (req, res)=>{
+  res.sendFile(path.join(__dirname, 'build/index.html'));
+})
 port = 3005
 
 app.listen(port, ()=> console.log(`listening on port ${port}`))
